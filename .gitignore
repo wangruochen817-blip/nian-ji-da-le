@@ -25,6 +25,7 @@ dist-ssr
 
 # Local working artifacts
 .trae/
+.worktrees/
 Campaign_workspace/
 meta-screenshots/
 reference-assets/
