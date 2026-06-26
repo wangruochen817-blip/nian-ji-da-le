@@ -39,18 +39,18 @@ export default function Home() {
             </div>
 
             <div className="flex items-end">
-              <div className="w-full rounded-[36px] border border-white/10 bg-white/[0.045] p-8 shadow-[0_50px_120px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+              <div className="w-full rounded-[36px] border border-white/15 bg-white/[0.045] p-9 shadow-[0_54px_128px_rgba(0,0,0,0.42)] backdrop-blur-xl">
                 <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">价值升级</p>
                 <div className="mt-8 space-y-6">
                   <div className="border-l border-cyan-300/50 pl-5">
                     <p className="text-2xl font-medium leading-10 text-white">用户想要的是结果，而不是工具本身。</p>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-[24px] border border-white/8 bg-black/20 p-5">
+                    <div className="rounded-[24px] border border-cyan-300/30 bg-black/20 p-6 shadow-[0_18px_44px_rgba(0,0,0,0.14)]">
                       <p className="text-[11px] uppercase tracking-[0.26em] text-zinc-500">Today</p>
                       <p className="mt-3 text-lg text-zinc-100">原子能力-&gt;工具</p>
                     </div>
-                    <div className="rounded-[24px] border border-white/8 bg-black/20 p-5">
+                    <div className="rounded-[24px] border border-violet-300/30 bg-black/20 p-6 shadow-[0_18px_44px_rgba(0,0,0,0.14)]">
                       <p className="text-[11px] uppercase tracking-[0.26em] text-zinc-500">Tomorrow</p>
                       <p className="mt-3 text-lg text-zinc-100">原子能力-&gt; Agent-&gt;完成任务</p>
                     </div>
@@ -93,9 +93,9 @@ export default function Home() {
             <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
             第四部分 / Demo
           </div>
-          <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015))] p-4 shadow-[0_40px_140px_rgba(0,0,0,0.38)] md:p-6">
+          <div className="relative overflow-hidden rounded-[40px] border border-white/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.042),rgba(255,255,255,0.014))] p-5 shadow-[0_44px_148px_rgba(0,0,0,0.34)] md:p-7">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.1),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(99,102,241,0.12),transparent_30%)]" />
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white shadow-[0_32px_80px_rgba(0,0,0,0.28)]">
+            <div className="relative overflow-hidden rounded-[28px] border border-white/30 bg-white shadow-[0_36px_88px_rgba(0,0,0,0.26)]">
               <img
                 src="/20260625-210857.jpeg"
                 alt="Campaign List UI demo"
@@ -121,7 +121,13 @@ export default function Home() {
         <section id="toolkits" className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <SectionTitle
             eyebrow="第六部分 / Toolkit"
-            title="Toolkit将成为1P/3P工具、技能的集合地，但不再是叙事的终点"
+            title={
+              <>
+                Toolkit × Agentic Hub
+                <br />
+                技能的集合地，但不再是叙事的重点
+              </>
+            }
             description=""
           />
           <div className="mt-14">

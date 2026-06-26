@@ -19,21 +19,21 @@ export default function DiagramBox({
   return (
     <div
       className={cn(
-        "rounded-[20px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] shadow-[0_24px_60px_rgba(0,0,0,0.24)]",
+        "rounded-[24px] border border-white/30 bg-[linear-gradient(180deg,rgba(255,255,255,0.068),rgba(255,255,255,0.026))] shadow-[0_28px_72px_rgba(0,0,0,0.26)] backdrop-blur-[3px]",
         className,
       )}
     >
       {title ? (
         <div
           className={cn(
-            "flex min-h-12 items-center justify-center rounded-t-[20px] border-b border-white/10 px-4 text-[14px] font-semibold text-zinc-100",
+            "flex min-h-14 items-center justify-center rounded-t-[24px] border-b border-white/20 px-5 text-[15px] font-semibold text-zinc-100",
             titleClassName,
           )}
         >
           {title}
         </div>
       ) : null}
-      <div className={cn("p-4", bodyClassName)}>{children}</div>
+      <div className={cn("p-5", bodyClassName)}>{children}</div>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Sparkles } from "lucide-react";
 
 export default function SectionTitle({
@@ -7,7 +8,7 @@ export default function SectionTitle({
   align = "left",
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   description: string;
   align?: "left" | "center";
 }) {

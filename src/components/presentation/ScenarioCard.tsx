@@ -9,7 +9,7 @@ type Scenario = {
 
 export default function ScenarioCard({ scenario }: { scenario: Scenario }) {
   return (
-    <article className="relative overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] p-6">
+    <article className="relative overflow-hidden rounded-[30px] border border-white/30 bg-white/[0.045] p-7 shadow-[0_28px_72px_rgba(0,0,0,0.18)]">
       <div className={`absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${scenario.accent}`} />
       <div className="relative">
         <div className="flex items-start justify-between gap-4">
@@ -21,7 +21,7 @@ export default function ScenarioCard({ scenario }: { scenario: Scenario }) {
         </div>
 
         <div className="mt-8 grid gap-4">
-          <div className="rounded-[22px] border border-white/10 bg-black/20 p-5">
+          <div className="rounded-[22px] border border-cyan-300/30 bg-black/20 p-6 shadow-[0_18px_48px_rgba(0,0,0,0.14)]">
             <p className="text-[11px] uppercase tracking-[0.26em] text-cyan-200">Insight</p>
             <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-300">
               {scenario.insight.map((item) => (
@@ -33,7 +33,7 @@ export default function ScenarioCard({ scenario }: { scenario: Scenario }) {
             </ul>
           </div>
 
-          <div className="rounded-[22px] border border-white/10 bg-black/20 p-5">
+          <div className="rounded-[22px] border border-emerald-300/30 bg-black/20 p-6 shadow-[0_18px_48px_rgba(0,0,0,0.14)]">
             <p className="text-[11px] uppercase tracking-[0.26em] text-emerald-200">Action</p>
             <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-300">
               {scenario.action.map((item) => (

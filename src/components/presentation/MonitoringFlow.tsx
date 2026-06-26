@@ -22,7 +22,7 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
         </h2>
       </div>
 
-      <div className="rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.28)] md:p-8">
+      <div className="rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.014))] p-7 shadow-[0_44px_128px_rgba(0,0,0,0.28)] md:p-9">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm uppercase tracking-[0.3em] text-zinc-400 md:text-base">Monitoring Card Product Metrics</p>
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-zinc-300">
@@ -38,16 +38,22 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
                 : index === 1
                   ? "border-violet-300/15 bg-violet-300/10 text-violet-200"
                   : "border-emerald-300/15 bg-emerald-300/10 text-emerald-200";
+            const articleBorder =
+              index === 0
+                ? "border-cyan-300/30"
+                : index === 1
+                  ? "border-violet-300/30"
+                  : "border-emerald-300/30";
 
             return (
               <div key={item.name} className="contents">
-                <article className="flex h-full flex-col rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(10,14,34,0.96),rgba(8,11,28,0.92))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-7">
+                <article className={`flex h-full flex-col rounded-[30px] border bg-[linear-gradient(180deg,rgba(10,14,34,0.965),rgba(8,11,28,0.935))] p-7 shadow-[0_24px_68px_rgba(0,0,0,0.22)] md:p-8 ${articleBorder}`}>
                   <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.04] text-xl text-white">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-[18px] border border-white/30 bg-white/[0.045] text-xl text-white">
                       {`0${index + 1}`}
                     </div>
                     <span
-                        className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.24em] ${accent} ${
+                        className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.24em] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${accent} ${
                           index < 2 ? "inline-flex h-14 items-center" : index === 2 ? "inline-flex h-14 items-center" : ""
                         }`}
                     >
@@ -64,7 +70,7 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
                     {item.bullets.map((bullet) => (
                       <div
                         key={bullet}
-                        className="flex min-h-[64px] items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.03] px-4 text-center text-base text-zinc-100"
+                        className="flex min-h-[68px] items-center justify-center rounded-[18px] border border-white/30 bg-white/[0.04] px-5 text-center text-[17px] text-zinc-100"
                       >
                         {bullet}
                       </div>
@@ -74,7 +80,7 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
 
                 {index !== items.length - 1 && (
                   <div className="hidden items-center justify-center xl:flex">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/[0.045]">
                       <ArrowRight className="h-5 w-5 text-zinc-200" />
                     </div>
                   </div>
@@ -85,7 +91,7 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
         </div>
 
         <div className="mt-6 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
-          <div className="rounded-[28px] border border-white/10 bg-black/20 p-6">
+          <div className="rounded-[28px] border border-cyan-300/30 bg-black/20 p-7 shadow-[0_20px_56px_rgba(0,0,0,0.16)]">
             <p className="text-[11px] uppercase tracking-[0.28em] text-zinc-500">Result-Oriented</p>
             <p className="mt-4 text-2xl leading-10 text-white">从“展示工具目录”升级为“围绕场景交付结果”。</p>
           </div>
@@ -98,7 +104,7 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex min-h-[112px] flex-col items-center justify-center rounded-[24px] border border-white/10 bg-white/[0.03] p-4 text-center"
+                className="flex min-h-[116px] flex-col items-center justify-center rounded-[24px] border border-white/30 bg-white/[0.04] p-5 text-center shadow-[0_18px_44px_rgba(0,0,0,0.12)]"
               >
                 <p className="text-[11px] uppercase tracking-[0.26em] text-zinc-500">{item.label}</p>
                 <p className="mt-3 text-xl text-white">{item.value}</p>

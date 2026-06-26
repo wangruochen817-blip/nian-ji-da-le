@@ -41,7 +41,7 @@ function SideTag({ label, className }: { label: string; className?: string }) {
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-[16px] border border-white/10 bg-white/[0.05] px-3 text-[16px] font-semibold tracking-[0.08em] text-zinc-100 shadow-[0_12px_30px_rgba(0,0,0,0.16)]",
+        "flex items-center justify-center rounded-[16px] border border-white/30 bg-white/[0.05] px-4 text-[18px] font-semibold tracking-[0.09em] text-zinc-100 shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
         className,
       )}
     >
@@ -52,7 +52,7 @@ function SideTag({ label, className }: { label: string; className?: string }) {
 
 function ScenarioStrip({ text }: { text: string }) {
   return (
-    <div className="flex min-h-[38px] items-center rounded-[12px] border border-white/10 bg-white/[0.045] px-5 text-[12px] font-semibold leading-6 text-zinc-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+    <div className="flex min-h-[42px] items-center rounded-[14px] border border-white/30 bg-white/[0.045] px-5 text-[13px] font-semibold leading-6 text-zinc-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
       {text}
     </div>
   );
@@ -78,15 +78,15 @@ function Frame({
   return (
     <section
       className={cn(
-        "rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,20,40,0.92),rgba(8,12,24,0.96))] shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_28px_60px_rgba(0,0,0,0.24)]",
+        "rounded-[24px] border border-white/30 bg-[linear-gradient(180deg,rgba(16,22,44,0.92),rgba(8,12,24,0.972))] shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_30px_68px_rgba(0,0,0,0.24)]",
         className,
       )}
     >
-      <div className={cn("px-5 pt-4 text-center", titleClassName)}>
-        <div className={cn("text-[15px] font-semibold tracking-[0.02em] text-zinc-100", titleTextClassName)}>{title}</div>
+      <div className={cn("px-5 pt-5 text-center", titleClassName)}>
+        <div className={cn("text-[16px] font-semibold tracking-[0.02em] text-zinc-100", titleTextClassName)}>{title}</div>
         {subtitle ? <div className="mt-1 text-[12px] font-medium text-zinc-300/85">{subtitle}</div> : null}
       </div>
-      <div className={cn("p-4", bodyClassName)}>{children}</div>
+      <div className={cn("p-5", bodyClassName)}>{children}</div>
     </section>
   );
 }
@@ -105,11 +105,11 @@ function InnerPanel({
   return (
     <div
       className={cn(
-        "rounded-[16px] border border-white/10 bg-white/[0.045] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
+        "rounded-[18px] border border-white/30 bg-white/[0.045] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
         className,
       )}
     >
-      <div className={cn("text-center text-[14px] font-semibold text-zinc-100", titleClassName)}>{title}</div>
+      <div className={cn("text-center text-[15px] font-semibold text-zinc-100", titleClassName)}>{title}</div>
       {children ? <div className="mt-3">{children}</div> : null}
     </div>
   );
@@ -119,7 +119,7 @@ function Chip({ label, className }: { label: string; className?: string }) {
   return (
     <div
       className={cn(
-        "flex min-h-[36px] items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.045] px-2 text-center text-[12px] font-medium leading-4 text-zinc-200",
+        "flex min-h-[38px] items-center justify-center rounded-[12px] border border-white/30 bg-white/[0.045] px-3 text-center text-[12px] font-medium leading-4 text-zinc-200",
         className,
       )}
     >
@@ -153,8 +153,8 @@ function AgentCard({
 export default function ImportedOtherFutureState() {
   return (
     <section className="flex w-full items-stretch gap-6">
-      <div className="min-w-0 flex-1 rounded-[34px] border border-white/10 bg-white/[0.035] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.38)] backdrop-blur-xl">
-        <div className="grid h-full grid-cols-[82px_minmax(0,1fr)] grid-rows-[136px_292px_minmax(0,1fr)] gap-x-4 gap-y-4">
+      <div className="min-w-0 flex-1 rounded-[36px] border border-white/15 bg-white/[0.035] p-7 shadow-[0_44px_128px_rgba(0,0,0,0.38)] backdrop-blur-xl">
+        <div className="grid h-full grid-cols-[84px_minmax(0,1fr)] grid-rows-[140px_300px_minmax(0,1fr)] gap-x-5 gap-y-5">
           <SideTag label="场景" className="h-full" />
 
           <div className="grid gap-3">
@@ -169,7 +169,7 @@ export default function ImportedOtherFutureState() {
           </div>
 
           <div className="grid grid-cols-[1.04fr_0.92fr_1.08fr] gap-4">
-            <Frame title="投前" subtitle="一键迁移开投">
+            <Frame title="投前" subtitle="一键迁移开投" className="border-amber-300/30">
               <InnerPanel title="批量" className="h-full">
                 <div className="grid gap-3">
                   {batchItems.map((item) => (
@@ -179,14 +179,14 @@ export default function ImportedOtherFutureState() {
               </InnerPanel>
             </Frame>
 
-            <Frame title="诊断" subtitle="智能托管调控">
+            <Frame title="诊断" subtitle="智能托管调控" className="border-cyan-300/30">
               <div className="grid h-full grid-rows-2 gap-4">
                 <InnerPanel title="AOS" className="flex items-center justify-center" titleClassName="text-[18px]" />
                 <InnerPanel title="自动规则" className="flex items-center justify-center" titleClassName="text-[18px]" />
               </div>
             </Frame>
 
-            <Frame title="盯盘复盘" subtitle="随时随地汇报">
+            <Frame title="盯盘复盘" subtitle="随时随地汇报" className="border-violet-300/30">
               <div className="grid h-full grid-rows-[1fr_1fr_auto] gap-3">
                 <InnerPanel title="Reporting" className="flex items-center justify-center" titleClassName="text-[16px]" />
                 <InnerPanel title="Status" className="flex items-center justify-center" titleClassName="text-[16px]" />
@@ -201,7 +201,7 @@ export default function ImportedOtherFutureState() {
           <SideTag label="原子能力" className="h-full" />
 
           <div className="grid grid-cols-[1.34fr_1fr] gap-4">
-            <Frame title="Campaign 创建" className="h-full">
+            <Frame title="Campaign 创建" className="h-full border-amber-300/30">
               <div className="space-y-3.5">
                 <Chip label="Campaign" className="min-h-[40px] text-[13px]" />
                 <div className="grid grid-cols-[1fr_1fr_0.82fr_46px] gap-2.5">
@@ -229,7 +229,7 @@ export default function ImportedOtherFutureState() {
             <div className="grid grid-rows-[1fr_0.94fr] gap-4">
               <Frame
                 title="Campaign 属性"
-                className="h-full"
+                className="h-full border-lime-300/30"
                 titleTextClassName="whitespace-nowrap text-[13px]"
                 bodyClassName="grid grid-cols-3 gap-3 p-4"
               >
@@ -240,7 +240,7 @@ export default function ImportedOtherFutureState() {
 
               <Frame
                 title="Campaign 指标"
-                className="h-full"
+                className="h-full border-emerald-300/30"
                 titleTextClassName="whitespace-nowrap text-[13px]"
                 bodyClassName="grid grid-cols-3 gap-3 p-4"
               >
@@ -253,8 +253,8 @@ export default function ImportedOtherFutureState() {
         </div>
       </div>
 
-      <aside className="w-[336px] rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(20,22,31,0.96),rgba(30,32,40,0.92))] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.42)]">
-        <div className="rounded-[16px] border border-[#ffafa6]/40 bg-[linear-gradient(180deg,rgba(87,35,48,0.54),rgba(46,22,31,0.58))] py-2 text-center text-[19px] font-semibold tracking-[0.03em] text-[#fff5f1]">
+      <aside className="w-[340px] rounded-[30px] border border-white/15 bg-[linear-gradient(180deg,rgba(20,22,31,0.965),rgba(30,32,40,0.925))] p-7 shadow-[0_44px_128px_rgba(0,0,0,0.42)]">
+        <div className="rounded-[16px] border border-[#ffafa6]/38 bg-[linear-gradient(180deg,rgba(87,35,48,0.52),rgba(46,22,31,0.56))] py-3 text-center text-[21px] font-semibold tracking-[0.03em] text-[#fff5f1]">
           Workflow Agent
         </div>
 
