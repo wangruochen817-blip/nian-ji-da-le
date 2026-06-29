@@ -3,7 +3,7 @@ export const navItems = [
   { href: "#current-state", label: "Today" },
   { href: "#future", label: "Upgrade" },
   { href: "#product-structure", label: "Structure" },
-  { href: "#demo", label: "Demo" },
+  { href: "#demo", label: "Flywheel" },
   { href: "#scenarios", label: "Scenarios" },
   { href: "#toolkits", label: "Toolkit" },
 ];

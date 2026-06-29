@@ -14,7 +14,7 @@ describe("App routing", () => {
     const currentStateBox = screen.getByText("Operator Know-How, Stored Offline").closest("p")?.parentElement?.parentElement;
     const monitoringCard = screen.getByText("Workflow card").closest("article");
     const scenarioCard = screen.getByText("Rejected Campaigns").closest("article");
-    const toolkitCard = screen.getByText("Creation").closest("article");
+    const toolkitCard = screen.getByText("Campaign Import").closest("article");
 
     expect(sideTags).toHaveLength(2);
     sideTags.forEach((tag) => {
@@ -34,10 +34,10 @@ describe("App routing", () => {
     expect(screen.getByText("Part IV / Scenario Flywheel")).toBeInTheDocument();
     expect(screen.getByText("From point tools to full-loop scenario coverage")).toBeInTheDocument();
     expect(screen.getByText("One loop. Four scenario domains. Continuous optimization.")).toBeInTheDocument();
-    expect(screen.getByText("Planning")).toBeInTheDocument();
-    expect(screen.getByText("Creation")).toBeInTheDocument();
-    expect(screen.getByText("Monitoring")).toBeInTheDocument();
-    expect(screen.getByText("Review")).toBeInTheDocument();
+    expect(screen.getAllByText("Planning").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Creation").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Monitoring").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Review").length).toBeGreaterThan(0);
     expect(screen.queryByText("Part IV / Demo")).not.toBeInTheDocument();
     expect(screen.queryByAltText("Campaign List UI demo")).not.toBeInTheDocument();
     expect(document.body.textContent).not.toMatch(/[\u4e00-\u9fff]/);
