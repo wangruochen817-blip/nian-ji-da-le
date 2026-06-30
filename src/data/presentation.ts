@@ -108,7 +108,7 @@ export const demoFilters = [
   "Rejected Campaigns",
   "Creative Tests",
   "AOS Opportunities",
-  "Meta Imported",
+  "Meta Import",
 ];
 
 export const demoCampaigns = [
@@ -127,13 +127,6 @@ export const scenarioCards = [
     accent: "from-rose-400/20 to-amber-200/10",
   },
   {
-    id: "creative-test",
-    name: "Creative Test Campaigns",
-    insight: ["Summarize test results: winner vs. loser creatives", "Find assets still waiting for testing"],
-    action: ["Use Bulk Edit to shift winner budgets", "Create new test groups with the testing tool"],
-    accent: "from-violet-400/20 to-sky-300/10",
-  },
-  {
     id: "aos",
     name: "Opportunities (AOS)",
     insight: ["Diagnose weak campaigns and spot growth oppotunities", "Aggregate root-cause attribution"],
@@ -141,8 +134,15 @@ export const scenarioCards = [
     accent: "from-cyan-400/20 to-emerald-300/10",
   },
   {
+    id: "creative-test",
+    name: "Creative Test Campaigns",
+    insight: ["Summarize test results: winner vs. loser creatives", "Find assets still waiting for testing"],
+    action: ["Use Bulk Edit to shift winner budgets", "Create new test groups with the testing tool"],
+    accent: "from-violet-400/20 to-sky-300/10",
+  },
+  {
     id: "meta-imported",
-    name: "Meta Imported",
+    name: "Meta Import",
     insight: ["Summarize imported campaign performance", "Identify promising imported assets"],
     action: ["Scale strong delivery with Bulk Edit", "Import more winners to expand the bench"],
     accent: "from-amber-300/20 to-fuchsia-300/10",

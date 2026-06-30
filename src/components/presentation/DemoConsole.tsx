@@ -92,8 +92,8 @@ export default function DemoConsole({
                 <span className="text-sm">Insight</span>
               </div>
               <ul className="mt-4 space-y-2 text-sm leading-7 text-zinc-400">
-                <li>Text rejection 占比最高。</li>
-                <li>高花费 campaign 集中在 US / SEA。</li>
+                <li>Text rejection is the dominant issue.</li>
+                <li>High-spend campaigns are concentrated in US / SEA.</li>
               </ul>
             </div>
 
@@ -103,7 +103,7 @@ export default function DemoConsole({
                 <span className="text-sm">Action</span>
               </div>
               <div className="mt-4 space-y-3">
-                {["启动 Smart Fix Skill", "批量修复违规素材"].map((item) => (
+                {["Launch Smart Fix Skill", "Bulk-fix non-compliant assets"].map((item) => (
                   <button
                     key={item}
                     className="flex w-full items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 text-left text-sm text-zinc-200 transition hover:border-cyan-300/30 hover:bg-cyan-300/10"

@@ -47,7 +47,7 @@ export default function FutureArchitecture({
     <div className="grid gap-8 xl:grid-cols-[1.02fr_0.98fr]">
       <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-5 shadow-[0_30px_100px_rgba(0,0,0,0.35)]">
         <div className="grid gap-4 lg:grid-cols-[56px_1fr]">
-          <RowLabel text="场景" accent="border-rose-300/30 bg-rose-300/10 text-rose-100" />
+          <RowLabel text="Scenario" accent="border-rose-300/30 bg-rose-300/10 text-rose-100" />
           <div className="grid gap-3 md:grid-cols-3">
             {managedScenarioBars.map((item) => (
               <div
@@ -62,7 +62,7 @@ export default function FutureArchitecture({
           <div />
           <AgentNode label="Workflow Agent" />
 
-          <RowLabel text="技能" accent="border-rose-300/20 bg-white/[0.03] text-zinc-300" />
+          <RowLabel text="Skill" accent="border-rose-300/20 bg-white/[0.03] text-zinc-300" />
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {skillGroups.map((item) => (
               <div
@@ -77,7 +77,7 @@ export default function FutureArchitecture({
           <div />
           <AgentNode label="Workflow Agent" />
 
-          <RowLabel text="工具" accent="border-amber-200/25 bg-amber-200/10 text-amber-100" />
+          <RowLabel text="Tools" accent="border-amber-200/25 bg-amber-200/10 text-amber-100" />
           <div className="rounded-[20px] border border-amber-200/15 bg-amber-100/[0.03] p-4">
             <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
               {toolGroups.map((group) => (
@@ -101,7 +101,7 @@ export default function FutureArchitecture({
           <div />
           <AgentNode label="Workflow Agent" />
 
-          <RowLabel text="原子能力" accent="border-lime-200/25 bg-lime-200/10 text-lime-50" />
+          <RowLabel text="Atomic Capabilities" accent="border-lime-200/25 bg-lime-200/10 text-lime-50" />
           <div className="rounded-[20px] border border-lime-200/15 bg-lime-100/[0.03] p-4">
             <div className="grid gap-4 xl:grid-cols-3">
               {atomicGroups.map((group) => (

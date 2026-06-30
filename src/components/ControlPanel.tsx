@@ -3,25 +3,25 @@ import { useCoverStore } from '../store';
 import { Type, Palette, LayoutTemplate, Layers, Download } from 'lucide-react';
 
 const THEMES = [
-  { id: 'minimal', label: '极简 Minimal' },
-  { id: 'dark', label: '暗黑 Dark' },
-  { id: 'solid', label: '纯色 Solid' },
-  { id: 'gradient', label: '渐变 Gradient' },
-  { id: 'glass', label: '毛玻璃 Glass' },
+  { id: 'minimal', label: 'Minimal' },
+  { id: 'dark', label: 'Dark' },
+  { id: 'solid', label: 'Solid' },
+  { id: 'gradient', label: 'Gradient' },
+  { id: 'glass', label: 'Glass' },
 ];
 
 const FONTS = [
-  { id: 'sans', label: '无衬线 Noto Sans' },
-  { id: 'serif', label: '衬线 Noto Serif' },
-  { id: 'zcool', label: '站酷快乐体' },
-  { id: 'mashan', label: '手写 马善政' },
+  { id: 'sans', label: 'Sans / Noto Sans' },
+  { id: 'serif', label: 'Serif / Noto Serif' },
+  { id: 'zcool', label: 'ZCOOL KuaiLe' },
+  { id: 'mashan', label: 'Ma Shan Zheng' },
 ];
 
 const PATTERNS = [
-  { id: 'none', label: '无纹理 None' },
-  { id: 'dots', label: '波点 Dots' },
-  { id: 'grid', label: '网格 Grid' },
-  { id: 'waves', label: '波纹 Waves' },
+  { id: 'none', label: 'None' },
+  { id: 'dots', label: 'Dots' },
+  { id: 'grid', label: 'Grid' },
+  { id: 'waves', label: 'Waves' },
 ];
 
 const COLORS = [
@@ -51,28 +51,28 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
       <div className="space-y-4">
         <div className="flex items-center gap-2 text-zinc-800 font-semibold mb-2">
           <Type className="w-5 h-5" />
-          <h2>文本内容</h2>
+          <h2>Text Content</h2>
         </div>
         
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-600">文档标题</label>
+          <label className="text-sm font-medium text-zinc-600">Document Title</label>
           <textarea
             value={store.title}
             onChange={(e) => store.setTitle(e.target.value)}
             className="w-full px-4 py-3 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
             rows={3}
-            placeholder="输入文章标题..."
+            placeholder="Enter the article title..."
           />
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-600">副标题 / 作者</label>
+          <label className="text-sm font-medium text-zinc-600">Subtitle / Author</label>
           <input
             type="text"
             value={store.subtitle}
             onChange={(e) => store.setSubtitle(e.target.value)}
             className="w-full px-4 py-3 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="输入副标题或作者名字..."
+            placeholder="Enter a subtitle or author name..."
           />
         </div>
       </div>
@@ -81,12 +81,12 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
       <div className="space-y-6">
         <div className="flex items-center gap-2 text-zinc-800 font-semibold">
           <Palette className="w-5 h-5" />
-          <h2>设计样式</h2>
+          <h2>Design Style</h2>
         </div>
 
         <div className="space-y-3">
           <label className="text-sm font-medium text-zinc-600 flex items-center gap-2">
-            <LayoutTemplate className="w-4 h-4" /> 主题风格
+            <LayoutTemplate className="w-4 h-4" /> Theme
           </label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {THEMES.map((theme) => (
@@ -107,7 +107,7 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
 
         <div className="space-y-3">
           <label className="text-sm font-medium text-zinc-600 flex items-center gap-2">
-            <Type className="w-4 h-4" /> 字体搭配
+            <Type className="w-4 h-4" /> Font Pairing
           </label>
           <div className="grid grid-cols-2 gap-2">
             {FONTS.map((font) => (
@@ -128,7 +128,7 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
 
         <div className="space-y-3">
           <label className="text-sm font-medium text-zinc-600 flex items-center gap-2">
-            <Layers className="w-4 h-4" /> 背景纹理
+            <Layers className="w-4 h-4" /> Background Pattern
           </label>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {PATTERNS.map((pattern) => (
@@ -149,7 +149,7 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
 
         <div className="space-y-3">
           <label className="text-sm font-medium text-zinc-600 flex items-center gap-2">
-            <Palette className="w-4 h-4" /> 强调色
+            <Palette className="w-4 h-4" /> Accent Color
           </label>
           <div className="flex flex-wrap gap-3">
             {COLORS.map((color) => (
@@ -183,7 +183,7 @@ export default function ControlPanel({ onDownload, isDownloading }: ControlPanel
           ) : (
             <Download className="w-6 h-6" />
           )}
-          {isDownloading ? '正在生成...' : '下载高清头图'}
+          {isDownloading ? 'Generating...' : 'Download HD Cover'}
         </button>
       </div>
     </div>

@@ -13,20 +13,20 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[11px] uppercase tracking-[0.3em] text-zinc-300">
           <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
-          第三部分 / 产品结构
+          Part III / Product Structure
         </div>
         <h2 className="max-w-6xl font-serif text-4xl leading-[1.02] text-white md:text-6xl xl:text-[72px]">
-          发现、理解、解决，
+          Discover, Understand, Solve,
           <br />
-          结果导向的产品结构。
+          product matrix built for outcomes
         </h2>
       </div>
 
       <div className="rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.014))] p-7 shadow-[0_44px_128px_rgba(0,0,0,0.28)] md:p-9">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm uppercase tracking-[0.3em] text-zinc-400 md:text-base">Monitoring Card Product Metrics</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-zinc-400 md:text-base">Workflow Card Product Metrics</p>
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-zinc-300">
-            盯盘卡 → Insight → Action
+            Card-&gt;Insight-&gt;Action
           </div>
         </div>
 
@@ -93,14 +93,14 @@ export default function MonitoringFlow({ items }: { items: FlowItem[] }) {
         <div className="mt-6 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
           <div className="rounded-[28px] border border-cyan-300/30 bg-black/20 p-7 shadow-[0_20px_56px_rgba(0,0,0,0.16)]">
             <p className="text-[11px] uppercase tracking-[0.28em] text-zinc-500">Result-Oriented</p>
-            <p className="mt-4 text-2xl leading-10 text-white">从“展示工具目录”升级为“围绕场景交付结果”。</p>
+            <p className="mt-4 text-2xl leading-10 text-white">Move from showing tool catalogs to delivering scenario outcomes.</p>
           </div>
 
           <div className="grid gap-3 md:grid-cols-3">
             {[
-              { label: "发现", value: "先筛场景" },
-              { label: "理解", value: "洞察分析" },
-              { label: "行动", value: "调用 Skill" },
+              { label: "Discover", value: "Attract scenario first" },
+              { label: "Understand", value: "Generate insight" },
+              { label: "Act", value: "Invoke a skill" },
             ].map((item) => (
               <div
                 key={item.label}

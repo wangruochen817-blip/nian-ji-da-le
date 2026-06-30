@@ -104,7 +104,7 @@ const CoverPreview = forwardRef<HTMLDivElement, {}>((_, ref) => {
             fontFamily === 'mashan' && "font-normal text-6xl md:text-8xl tracking-normal"
           )}
         >
-          {title || '请输入标题'}
+          {title || 'Enter a title'}
         </h1>
         
         {subtitle && (

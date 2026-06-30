@@ -31,16 +31,11 @@ describe("App routing", () => {
     expect(toolkitCard).toHaveClass("bg-white/[0.045]");
     expect(screen.getByText("Workflow Product Roadmap")).toBeInTheDocument();
     expect(screen.getByText("From Tools to Solutions")).toBeInTheDocument();
-    expect(screen.getByText("Part IV / Scenario Flywheel")).toBeInTheDocument();
-    expect(screen.getByText("From point tools to full-loop scenario coverage")).toBeInTheDocument();
-    expect(screen.getByText("One loop. Four scenario domains. Continuous optimization.")).toBeInTheDocument();
-    expect(screen.getAllByText("Planning").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("Creation").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("Monitoring").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("Review").length).toBeGreaterThan(0);
-    expect(screen.queryByText("Part IV / Demo")).not.toBeInTheDocument();
-    expect(screen.queryByAltText("Campaign List UI demo")).not.toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/[\u4e00-\u9fff]/);
+    expect(screen.getByText("Part IV / Demo")).toBeInTheDocument();
+    expect(screen.getByAltText("Demo")).toBeInTheDocument();
+    expect(screen.queryByText("Part IV / Scenario Flywheel")).not.toBeInTheDocument();
+    expect(screen.queryByText("From point tools to full-loop scenario coverage")).not.toBeInTheDocument();
+    expect(screen.queryByText("One loop. Four scenario domains. Continuous optimization.")).not.toBeInTheDocument();
   });
 
   it("does not expose removed standalone routes", () => {

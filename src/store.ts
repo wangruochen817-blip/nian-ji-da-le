@@ -16,8 +16,8 @@ interface CoverState {
 }
 
 export const useCoverStore = create<CoverState>((set) => ({
-  title: '在这里输入您的文档标题',
-  subtitle: '作者或副标题 / Author or Subtitle',
+  title: 'Enter your document title here',
+  subtitle: 'Author or subtitle',
   theme: 'minimal',
   fontFamily: 'sans',
   pattern: 'none',

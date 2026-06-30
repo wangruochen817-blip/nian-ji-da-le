@@ -2,38 +2,26 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const scenarioRows = [
-  "大促全流程： 自动化测品/素材 -> 自动化Campaign Setup -> 盯盘预警调控 -> 投后复盘 -> 策略沉淀",
-  "TikTok 投放策略沉淀流： A/B 测试Set up -> 素材测试Set up -> 度量 Set up -> 测试复盘 -> Media Plan建议",
-  "深度复盘洞察： 月/季/年趋势复盘 -> Media/人群/素材/转化场景复盘 -> 一键汇报产生PPT/HTML",
+  "Tentpole: Product and creative testing-> smart setup-> Monitoring alert -> Review",
+  "Media plan: A/B test setup->creative test -> Measurement setup-> Scale",
+  "Deep review: MoM/YoY review -> Media/Audience/Conversion review -> Presentation",
 ];
-
-const batchItems = ["批量编辑", "批量导入/导出", "批量复制"];
-const campaignFields = ["Objective", "Budget", "CBO", "..."];
-const adGroupFields = ["Bid", "Targeting", "Placement", "..."];
-const adFields = ["创意上传/更换", "名字编辑", "URL设置/编辑", "..."];
-const attributeFields = ["Objectives", "Signal", "Label", "Placement", "Attribution", "..."];
-const metricFields = ["Reach", "Engagement", "Conversion"];
 
 const workflowCards = [
   {
-    title: "输出平台主张",
-    description: "复杂场景调用多 Skill，智能托管HITL",
-    className: "min-h-[148px]",
+    title: "Educate methodologies",
+    description: "Multi-skill workflows with HITL.",
+    className: "min-h-0 flex-1",
   },
   {
-    title: "解决主流问题",
-    description: "1P: 盯盘卡顿场景归类，封装技能=工作流+工具",
-    className: "min-h-[122px]",
+    title: "Achieve goal with workflow",
+    description: "Start with senario, achieve with agentic worklow powered by tools",
+    className: "min-h-0 flex-1",
   },
   {
-    title: "解决特定问题",
-    description: "3P: 客户自定义场景，自定义技能",
-    className: "min-h-[102px]",
-  },
-  {
-    title: "释放人力",
-    description: "根据原子能力更新点，更新工具",
-    className: "min-h-[272px] flex-1",
+    title: "Robust Infra",
+    description: "Tools update with atomic changes.",
+    className: "min-h-0 flex-1",
   },
 ];
 
@@ -41,7 +29,7 @@ function SideTag({ label, className }: { label: string; className?: string }) {
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-[16px] border border-white/30 bg-white/[0.05] px-4 text-[18px] font-semibold tracking-[0.09em] text-zinc-100 shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
+        "flex items-center justify-center rounded-[16px] border border-white/30 bg-white/[0.05] px-4 text-[16px] font-semibold tracking-[0.06em] text-zinc-100 shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
         className,
       )}
     >
@@ -115,19 +103,6 @@ function InnerPanel({
   );
 }
 
-function Chip({ label, className }: { label: string; className?: string }) {
-  return (
-    <div
-      className={cn(
-        "flex min-h-[38px] items-center justify-center rounded-[12px] border border-white/30 bg-white/[0.045] px-3 text-center text-[12px] font-medium leading-4 text-zinc-200",
-        className,
-      )}
-    >
-      {label}
-    </div>
-  );
-}
-
 function AgentCard({
   title,
   description,
@@ -140,12 +115,12 @@ function AgentCard({
   return (
     <article
       className={cn(
-        "rounded-[22px] border border-[#ffafa6]/40 bg-[linear-gradient(180deg,rgba(87,35,48,0.62),rgba(46,22,31,0.72))] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,235,231,0.08),inset_0_18px_36px_rgba(255,255,255,0.02),0_30px_60px_rgba(0,0,0,0.28)]",
+        "rounded-[22px] border border-[#ffafa6]/40 bg-[linear-gradient(180deg,rgba(87,35,48,0.62),rgba(46,22,31,0.72))] px-6 py-6 text-center shadow-[inset_0_1px_0_rgba(255,235,231,0.08),inset_0_18px_36px_rgba(255,255,255,0.02),0_30px_60px_rgba(0,0,0,0.28)]",
         className,
       )}
     >
       <h3 className="text-[26px] font-semibold tracking-[0.03em] text-[#fff5f2]">{title}</h3>
-      <p className="mt-5 text-[14px] font-medium leading-7 text-[#ffe6df]/92">{description}</p>
+      <p className="mt-3 text-[13px] font-medium leading-6 text-[#ffe6df]/92">{description}</p>
     </article>
   );
 }
@@ -155,7 +130,7 @@ export default function ImportedOtherFutureState() {
     <section className="flex w-full items-stretch gap-6">
       <div className="min-w-0 flex-1 rounded-[36px] border border-white/15 bg-white/[0.035] p-7 shadow-[0_44px_128px_rgba(0,0,0,0.38)] backdrop-blur-xl">
         <div className="grid h-full grid-cols-[84px_minmax(0,1fr)] grid-rows-[140px_300px_minmax(0,1fr)] gap-x-5 gap-y-5">
-          <SideTag label="场景" className="h-full" />
+          <SideTag label="Scenario" className="h-full" />
 
           <div className="grid gap-3">
             {scenarioRows.map((item) => (
@@ -163,30 +138,24 @@ export default function ImportedOtherFutureState() {
             ))}
           </div>
 
-          <div className="grid grid-rows-[56px_minmax(0,1fr)] gap-4">
-            <SideTag label="技能" className="h-[56px]" />
-            <SideTag label="工具" className="h-full" />
-          </div>
+          <SideTag label="workflow" className="h-full" />
 
           <div className="grid grid-cols-[1.04fr_0.92fr_1.08fr] gap-4">
-            <Frame title="投前" subtitle="一键迁移开投" className="border-amber-300/30">
-              <InnerPanel title="批量" className="h-full">
-                <div className="grid gap-3">
-                  {batchItems.map((item) => (
-                    <Chip key={item} label={item} className="min-h-[34px] text-[13px]" />
-                  ))}
-                </div>
-              </InnerPanel>
-            </Frame>
-
-            <Frame title="诊断" subtitle="智能托管调控" className="border-cyan-300/30">
-              <div className="grid h-full grid-rows-2 gap-4">
-                <InnerPanel title="AOS" className="flex items-center justify-center" titleClassName="text-[18px]" />
-                <InnerPanel title="自动规则" className="flex items-center justify-center" titleClassName="text-[18px]" />
+            <Frame title="Pre-Launch" subtitle="One-click migration and launch" className="border-amber-300/30">
+              <div className="grid gap-4">
+                <InnerPanel title="Meta Import" className="flex items-center justify-center py-6" titleClassName="text-[18px]" />
+                <InnerPanel title="Bulk Edit" className="flex items-center justify-center py-6" titleClassName="text-[18px]" />
               </div>
             </Frame>
 
-            <Frame title="盯盘复盘" subtitle="随时随地汇报" className="border-violet-300/30">
+            <Frame title="Monitoring" subtitle="Managed intelligent control" className="border-cyan-300/30">
+              <div className="grid h-full grid-rows-2 gap-4">
+                <InnerPanel title="Diagnosis" className="flex items-center justify-center" titleClassName="text-[18px]" />
+                <InnerPanel title="Automation Rule" className="flex items-center justify-center" titleClassName="text-[18px]" />
+              </div>
+            </Frame>
+
+            <Frame title="Review" subtitle="Report anywhere, anytime" className="border-violet-300/30">
               <div className="grid h-full grid-rows-[1fr_1fr_auto] gap-3">
                 <InnerPanel title="Reporting" className="flex items-center justify-center" titleClassName="text-[16px]" />
                 <InnerPanel title="Status" className="flex items-center justify-center" titleClassName="text-[16px]" />
@@ -198,56 +167,15 @@ export default function ImportedOtherFutureState() {
             </Frame>
           </div>
 
-          <SideTag label="原子能力" className="h-full" />
+          <SideTag label="Atom" className="mt-4 h-[180px]" />
 
-          <div className="grid grid-cols-[1.34fr_1fr] gap-4">
-            <Frame title="Campaign 创建" className="h-full border-amber-300/30">
-              <div className="space-y-3.5">
-                <Chip label="Campaign" className="min-h-[40px] text-[13px]" />
-                <div className="grid grid-cols-[1fr_1fr_0.82fr_46px] gap-2.5">
-                  {campaignFields.map((item) => (
-                    <Chip key={item} label={item} className="min-h-[36px] text-[12px]" />
-                  ))}
-                </div>
+          <div className="grid grid-cols-[1.26fr_0.74fr] gap-4 pt-4">
+            <SideTag label="Campaign Creation" className="h-[180px]" />
 
-                <Chip label="Ad group" className="min-h-[40px] text-[13px]" />
-                <div className="grid grid-cols-[0.86fr_1.08fr_1fr_46px] gap-2.5">
-                  {adGroupFields.map((item) => (
-                    <Chip key={item} label={item} className="min-h-[36px] text-[12px]" />
-                  ))}
-                </div>
+            <div className="grid h-[180px] grid-rows-2 gap-4">
+              <SideTag label="Campaign Attributes" className="h-[82px] text-[15px] tracking-[0.04em]" />
 
-                <Chip label="Ad" className="min-h-[40px] text-[13px]" />
-                <div className="grid grid-cols-[1.08fr_0.92fr_1.08fr_46px] gap-2.5">
-                  {adFields.map((item) => (
-                    <Chip key={item} label={item} className="min-h-[36px] px-1.5 text-[11px] leading-tight" />
-                  ))}
-                </div>
-              </div>
-            </Frame>
-
-            <div className="grid grid-rows-[1fr_0.94fr] gap-4">
-              <Frame
-                title="Campaign 属性"
-                className="h-full border-lime-300/30"
-                titleTextClassName="whitespace-nowrap text-[13px]"
-                bodyClassName="grid grid-cols-3 gap-3 p-4"
-              >
-                {attributeFields.map((item) => (
-                  <Chip key={item} label={item} className="min-h-[50px] px-1.5 text-[11px] leading-tight" />
-                ))}
-              </Frame>
-
-              <Frame
-                title="Campaign 指标"
-                className="h-full border-emerald-300/30"
-                titleTextClassName="whitespace-nowrap text-[13px]"
-                bodyClassName="grid grid-cols-3 gap-3 p-4"
-              >
-                {metricFields.map((item) => (
-                  <Chip key={item} label={item} className="min-h-[108px] break-words px-1 text-[11px] leading-tight" />
-                ))}
-              </Frame>
+              <SideTag label="Campaign Metrics" className="h-[82px] text-[15px] tracking-[0.04em]" />
             </div>
           </div>
         </div>

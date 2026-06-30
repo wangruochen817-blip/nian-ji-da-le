@@ -2,37 +2,37 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const scenarioRows = [
-  "大促全流程： 自动化测品/素材 -> 自动化Campaign Setup -> 盯盘预警调控 -> 投后复盘 -> 策略沉淀",
-  "TikTok 投放策略沉淀流： A/B 测试Set up -> 素材测试Set up -> 度量 Set up -> 测试复盘 -> Media Plan建议",
-  "深度复盘洞察： 月/季/年趋势复盘 -> Media/人群/素材/转化场景复盘 -> 一键汇报产生PPT/HTML",
+  "Peak-season flow: automated product and asset testing -> automated campaign setup -> monitoring alerts and control -> post-campaign review -> strategy retention",
+  "TikTok strategy retention: A/B test setup -> creative test setup -> measurement setup -> test review -> media plan suggestions",
+  "Deep review insights: monthly / quarterly / yearly trend reviews -> media, audience, creative, and conversion analysis -> one-click PPT / HTML reports",
 ];
 
-const batchItems = ["批量编辑", "批量导入/导出", "批量复制"];
+const batchItems = ["Bulk Edit", "Import / Export", "Bulk Duplicate"];
 const campaignFields = ["Objective", "Budget", "CBO", "..."];
 const adGroupFields = ["Bid", "Targeting", "Placement", "..."];
-const adFields = ["创意上传/更换", "名字编辑", "URL设置/编辑", "..."];
+const adFields = ["Creative Upload / Swap", "Name Edit", "URL Edit", "..."];
 const attributeFields = ["Objectives", "Signal", "Label", "Placement", "Attribution", "..."];
 const metricFields = ["Reach", "Engagement", "Conversion"];
 
 const workflowCards = [
   {
-    title: "输出平台主张",
-    description: "复杂场景调用多 Skill，智能托管HITL",
+    title: "State the Platform Promise",
+    description: "Complex scenarios orchestrate multiple skills with HITL management.",
     className: "min-h-[148px]",
   },
   {
-    title: "解决主流问题",
-    description: "1P: 盯盘卡顿场景归类，封装技能=工作流+工具",
+    title: "Solve Common Problems",
+    description: "1P: classify monitoring scenarios and package skills as workflows plus tools.",
     className: "min-h-[122px]",
   },
   {
-    title: "解决特定问题",
-    description: "3P: 客户自定义场景，自定义技能",
+    title: "Solve Specific Problems",
+    description: "3P: customer-defined scenarios with custom skills.",
     className: "min-h-[102px]",
   },
   {
-    title: "释放人力",
-    description: "根据原子能力更新点，更新工具",
+    title: "Free Up Teams",
+    description: "Update tools in step with changes to atomic capabilities.",
     className: "min-h-[272px] flex-1",
   },
 ];
@@ -163,7 +163,7 @@ export default function Other3Page() {
         <section className="flex w-full items-stretch gap-6">
           <div className="min-w-0 flex-1 rounded-[34px] border border-white/10 bg-white/[0.035] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.38)] backdrop-blur-xl">
             <div className="grid h-full grid-cols-[82px_minmax(0,1fr)] grid-rows-[136px_292px_minmax(0,1fr)] gap-x-4 gap-y-4">
-              <SideTag label="场景" className="h-full" />
+              <SideTag label="Scenario" className="h-full" />
 
               <div className="grid gap-3">
                 {scenarioRows.map((item) => (
@@ -172,13 +172,13 @@ export default function Other3Page() {
               </div>
 
               <div className="grid grid-rows-[56px_minmax(0,1fr)] gap-4">
-                <SideTag label="技能" className="h-[56px]" />
-                <SideTag label="工具" className="h-full" />
+                <SideTag label="Skill" className="h-[56px]" />
+                <SideTag label="Tools" className="h-full" />
               </div>
 
               <div className="grid grid-cols-[1.04fr_0.92fr_1.08fr] gap-4">
-                <Frame title="投前" subtitle="一键迁移开投">
-                  <InnerPanel title="批量" className="h-full">
+                <Frame title="Pre-Launch" subtitle="One-click migration and launch">
+                  <InnerPanel title="Bulk" className="h-full">
                     <div className="grid gap-3">
                       {batchItems.map((item) => (
                         <Chip key={item} label={item} className="min-h-[34px] text-[13px]" />
@@ -187,14 +187,14 @@ export default function Other3Page() {
                   </InnerPanel>
                 </Frame>
 
-                <Frame title="诊断" subtitle="智能托管调控">
+                <Frame title="Diagnosis" subtitle="Managed intelligent control">
                   <div className="grid h-full grid-rows-2 gap-4">
                     <InnerPanel title="AOS" className="flex items-center justify-center" titleClassName="text-[18px]" />
-                    <InnerPanel title="自动规则" className="flex items-center justify-center" titleClassName="text-[18px]" />
+                    <InnerPanel title="Automation Rule" className="flex items-center justify-center" titleClassName="text-[18px]" />
                   </div>
                 </Frame>
 
-                <Frame title="盯盘复盘" subtitle="随时随地汇报">
+                <Frame title="Monitoring Review" subtitle="Report anywhere, anytime">
                   <div className="grid h-full grid-rows-[1fr_1fr_auto] gap-3">
                     <InnerPanel title="Reporting" className="flex items-center justify-center" titleClassName="text-[16px]" />
                     <InnerPanel title="Status" className="flex items-center justify-center" titleClassName="text-[16px]" />
@@ -206,10 +206,10 @@ export default function Other3Page() {
                 </Frame>
               </div>
 
-              <SideTag label="原子能力" className="h-full" />
+              <SideTag label="Atomic Capabilities" className="h-full" />
 
               <div className="grid grid-cols-[1.34fr_1fr] gap-4">
-                <Frame title="Campaign 创建" className="h-full">
+                <Frame title="Campaign Creation" className="h-full">
                   <div className="space-y-3.5">
                     <Chip label="Campaign" className="min-h-[40px] text-[13px]" />
                     <div className="grid grid-cols-[1fr_1fr_0.82fr_46px] gap-2.5">
@@ -236,7 +236,7 @@ export default function Other3Page() {
 
                 <div className="grid grid-rows-[1fr_0.94fr] gap-4">
                   <Frame
-                    title="Campaign 属性"
+                    title="Campaign Attributes"
                     className="h-full"
                     titleTextClassName="whitespace-nowrap text-[13px]"
                     bodyClassName="grid grid-cols-3 gap-3 p-4"
@@ -247,7 +247,7 @@ export default function Other3Page() {
                   </Frame>
 
                   <Frame
-                    title="Campaign 指标"
+                    title="Campaign Metrics"
                     className="h-full"
                     titleTextClassName="whitespace-nowrap text-[13px]"
                     bodyClassName="grid grid-cols-3 gap-3 p-4"

@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
+
 import { cn } from "@/lib/utils";
 
 interface PainCardProps {
-  title: string;
-  description: string;
+  title: ReactNode;
+  description: ReactNode;
   className?: string;
 }
 
@@ -14,7 +16,9 @@ export default function PainCard({ title, description, className }: PainCardProp
         className,
       )}
     >
-      <h3 className="text-[26px] font-semibold tracking-[0.06em] text-white">{title}</h3>
+      <h3 className="flex flex-col items-center gap-1 text-[24px] font-semibold leading-tight tracking-[0.04em] text-white">
+        {title}
+      </h3>
       <p className="mt-5 text-[14px] leading-7 text-zinc-200/88">{description}</p>
     </article>
   );

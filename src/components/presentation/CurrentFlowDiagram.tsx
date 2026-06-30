@@ -63,25 +63,25 @@ export default function CurrentFlowDiagram({
   return (
     <div className="rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
       <div className="grid gap-4 lg:grid-cols-[56px_1fr]">
-        <RowLabel text="场景" accent="border-rose-300/30 bg-rose-300/10 text-rose-100" />
+        <RowLabel text="Scenario" accent="border-rose-300/30 bg-rose-300/10 text-rose-100" />
         <div className="rounded-[20px] border border-white/10 bg-white/[0.03] px-6 py-8 lg:row-span-2">
           <div className="flex min-h-[142px] items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.03] text-center">
-            <div className="text-2xl font-medium tracking-[0.12em] text-[#c2b3b4]">操盘手线下沉淀</div>
+            <div className="text-2xl font-medium tracking-[0.12em] text-[#c2b3b4]">Operator Know-How, Stored Offline</div>
           </div>
         </div>
 
-        <RowLabel text="技能" accent="border-rose-300/20 bg-white/[0.03] text-zinc-500" />
+        <RowLabel text="Skill" accent="border-rose-300/20 bg-white/[0.03] text-zinc-500" />
 
-        <RowLabel text="工具" accent="border-amber-200/25 bg-amber-200/10 text-amber-100" />
+        <RowLabel text="Tools" accent="border-amber-200/25 bg-amber-200/10 text-amber-100" />
         <div className="rounded-[20px] border border-amber-200/15 bg-amber-100/[0.03] p-4">
           <div className="space-y-4">
             <div className="rounded-[14px] border border-amber-200/20 bg-amber-200/10 px-4 py-2 text-center text-xs font-medium text-amber-50">
-              自动规则
+              Automation Rule
             </div>
 
             <div className="grid gap-3 md:grid-cols-[2fr_1fr]">
               <div className="rounded-[18px] border border-white/10 bg-black/15 p-4">
-                <div className="text-center text-[11px] font-medium tracking-[0.12em] text-zinc-400">批量</div>
+                <div className="text-center text-[11px] font-medium tracking-[0.12em] text-zinc-400">Bulk</div>
                 <div className="mt-3 grid gap-2">
                   {batchItems.map((item) => (
                     <Pill key={item} tone="tool">
@@ -109,7 +109,7 @@ export default function CurrentFlowDiagram({
           </div>
         </div>
 
-        <RowLabel text="原子能力" accent="border-lime-200/25 bg-lime-200/10 text-lime-50" />
+        <RowLabel text="Atomic Capabilities" accent="border-lime-200/25 bg-lime-200/10 text-lime-50" />
         <div className="rounded-[20px] border border-lime-200/15 bg-lime-100/[0.03] p-4">
           <div className="grid gap-4 xl:grid-cols-2 2xl:grid-cols-[1.85fr_1.1fr_1fr]">
             <div className="rounded-[18px] border border-white/10 bg-black/15 p-4 xl:col-span-2 2xl:col-span-1">

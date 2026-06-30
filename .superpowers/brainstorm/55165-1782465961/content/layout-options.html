@@ -1,0 +1,130 @@
+<h2>新双语分页站点：三种方案</h2>
+<p class="subtitle">基于“现场投屏主讲”场景，我把重点放在翻页节奏、科技感和中英共存时的稳定版式。</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A. 左右翻页 | 推荐</div>
+        <div class="mockup-body" style="display:grid;gap:14px;">
+          <div style="height:42px;border:1px solid rgba(125,211,252,.35);border-radius:14px;background:rgba(125,211,252,.08);display:flex;align-items:center;justify-content:center;">Section 01 / Hero</div>
+          <div style="display:grid;gap:10px;">
+            <div style="height:76px;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px;background:rgba(255,255,255,.04);">
+              <div style="font-size:24px;font-weight:700;">中文主标题</div>
+              <div style="margin-top:6px;font-size:13px;opacity:.72;">English support line / subtitle</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:10px;">
+              <div style="height:92px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04);"></div>
+              <div style="height:92px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-size:12px;opacity:.65;">01 / 06</div>
+            <div style="font-size:12px;opacity:.65;">Swipe / Arrow Right</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 横向翻页章节站</h3>
+      <p>每个部分独立成全屏一页，左右切换。中文版做主叙事，英文作为同页内的副标题、辅助说明和标签。</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>优点</h4>
+          <ul>
+            <li>最像正式发布会式演示，科技感最好做</li>
+            <li>不需要把现有版式重排成中英双栏</li>
+            <li>投屏时中文仍然是主视觉，英文不抢版面</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>代价</h4>
+          <ul>
+            <li>英文不是逐块并排对照，而是同页辅助呈现</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B. 上下翻页</div>
+        <div class="mockup-body" style="display:grid;gap:12px;">
+          <div style="height:40px;border:1px solid rgba(196,181,253,.35);border-radius:14px;background:rgba(196,181,253,.08);display:flex;align-items:center;justify-content:center;">Section 01</div>
+          <div style="height:78px;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px;background:rgba(255,255,255,.04);">
+            <div style="font-size:24px;font-weight:700;">中文主标题</div>
+            <div style="margin-top:6px;font-size:13px;opacity:.72;">English subtitle</div>
+          </div>
+          <div style="height:120px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04);"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-size:12px;opacity:.65;">Scroll Down</div>
+            <div style="font-size:12px;opacity:.65;">01 / 06</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 纵向翻页叙事站</h3>
+      <p>每部分一整屏，向下切换到下一部分。中文主叙事，英文仍做辅助说明。</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>优点</h4>
+          <ul>
+            <li>更自然，接近滚动叙事</li>
+            <li>章节之间更像“沉浸式下潜”</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>代价</h4>
+          <ul>
+            <li>现场翻页的“控制感”弱于横向切换</li>
+            <li>容易被理解成高级长页，而不是章节式演示</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">C. 中英双栏同页</div>
+        <div class="mockup-body" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="height:220px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04);padding:12px;">
+            <div style="font-size:18px;font-weight:700;">中文区</div>
+          </div>
+          <div style="height:220px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.04);padding:12px;">
+            <div style="font-size:18px;font-weight:700;">English</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 同页中英并排对照</h3>
+      <p>每页强制中文和英文左右并列，信息完全对照。</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>优点</h4>
+          <ul>
+            <li>语言关系最直接</li>
+            <li>适合静态阅读和逐句对照</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>代价</h4>
+          <ul>
+            <li>最容易破坏你当前已经调好的版式</li>
+            <li>投屏时文字密度上去，科技感反而下降</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="label">我的建议</p>
+  <p>推荐 <strong>A</strong>：左右翻页的全屏章节站，中文做主叙事，英文做同页辅助说明。这样最接近“新网站 + 科技感 + 不想重新调格式”的目标。</p>
+</div>

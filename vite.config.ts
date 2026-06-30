@@ -6,6 +6,14 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   base: mode === "production" ? "/nian-ji-da-le/" : "/",
+  server: {
+    port: 5178,
+    strictPort: true,
+  },
+  preview: {
+    port: 5178,
+    strictPort: true,
+  },
   build: {
     sourcemap: 'hidden',
   },
