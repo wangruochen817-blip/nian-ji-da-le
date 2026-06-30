@@ -33,6 +33,7 @@ src/pages/_backups/
 *.png
 *.jpg
 *.jpeg
+!src/assets/demo-20260630-223007.jpeg
 *.zip
 auth_qrcode.png
 qr_code.png
